@@ -1,0 +1,111 @@
+.motive{
+    background-color:$grey;
+    .col-md-6{
+        &:first-child{
+            padding:10% 5%;
+            @media(max-width:1000px){
+                padding:5%;
+            }
+            @media(max-width:767px){
+                text-align:center;
+            }
+            h2{
+                font-size:50px;
+                @media(max-width:1000px){
+                    font-size:29px;
+                }
+               
+            }
+            p{
+                margin-bottom:30px;
+            }
+            hr{
+             width: 15%;border: none;height: 3px;background: rgb(0, 0, 0);margin: 3% 0;
+             @media(max-width:767px){
+                 margin:0 auto 20px;
+             }
+            }
+           
+            .links{
+                display: flex;flex-direction: column;justify-content: space-between;height:200px;
+                a{
+                    text-decoration:none;color:black;background:white;padding:20px 15px;width: 60%;border-radius:5px;
+                    @media(max-width:1000px){
+                        width:80%;
+                    }
+                    @media(max-width:767px){
+                  width:auto;
+              }
+              
+                    i{
+                        margin-right:15px;
+                    }
+                }
+            }
+            .active{
+                color:$blue !important;font-weight:bold;
+                i{
+                    color:$blue;
+                }
+            }
+        }
+       
+    }
+    .bgImage{
+        background:linear-gradient(to bottom,rgba(0, 0, 0, 0.342)), url("../img/motiv1.jpg");max-height:700px;display:flex;justify-content: center;align-items:center;background-size:cover;background-position: center center;
+       @media(max-width:767px){
+           height:400px;
+       }
+        .play{
+          transition:.5s;  background-color:white;width:70px;height:70px;color:black;padding:10%;border-radius:50%;display:flex;justify-content: center;align-items:center;animation:animate 2s linear infinite;cursor:pointer;
+&:hover{
+    color:$blue;
+   
+}
+
+
+@keyframes animate{
+0%{
+    box-shadow:0 0 0 rgba(255, 255, 255, 0.726);
+}
+40%{    
+    box-shadow:0 0 100px rgba(255, 255, 255, 0.5);
+}
+80%{
+    box-shadow:0 0 100px rgba(255, 255, 255, 0);
+}
+100%{
+    box-shadow:0 0 0 rgba(7, 94, 84, 0)
+}
+}
+        }
+    }
+}
+
+.close{
+    margin:5%;
+    cursor: pointer;
+}
+#myModal{
+   
+    position: fixed;
+    z-index: 50;
+   height:100%;
+   width:100%;
+    overflow: hidden;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition:.5s;
+    top:0;
+    left:0;
+    background: rgba(0, 0, 0, 0.363);
+}
+video{
+    width:70%;
+    height:auto;
+    position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
